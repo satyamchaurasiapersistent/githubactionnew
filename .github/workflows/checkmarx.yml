@@ -51,7 +51,7 @@ jobs:
         sca_access_control_url: https://platform.checkmarx.net
         sca_tenant: "Plugins" # <-- Insert Checkmarx CxSCA Tenant
         sca_username: ${{ secrets.SCA_USERNAME }} # To be stored in GitHub Secrets.
-        sca_password: ${{ secrets.CHECKMARX_SCA_PASSWORD }} # To be stored in GitHub Secrets.
+        sca_password: ${{ secrets.SCA_PASSWORD }} # To be stored in GitHub Secrets.
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
         scanners: sca
         params: --logging.level.com.checkmarx.flow.service=DEBUG --github --cxflow.bug-tracker-impl="githubpull" --bug-tracker="githubpull" --cxflow.break-build=true --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch="main" --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
