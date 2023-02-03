@@ -46,7 +46,7 @@ jobs:
         sca_username: ${{ secrets.SCA_USERNAME }} # To be stored in GitHub Secrets.
         sca_password: ${{ secrets.SCA_PASSWORD }} # To be stored in GitHub Secrets.
         incremental: true
-        break_build: false
+        break_build: true
         scanners: sast
         bug_tracker: GITHUBPULL
         params: --repo-url=${{ github.event.repository.url }} --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} --cx-flow.filterSeverity --cx-flow.filterCategory
