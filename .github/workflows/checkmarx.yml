@@ -50,5 +50,3 @@ jobs:
         scanners: sca
         bug_tracker: GITHUBPULL
         params: --github.block-merge=true --github.error-merge=true --repo-url=${{ github.event.repository.url }} --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} --cx-flow.filterSeverity --cx-flow.filterCategory
-
-Footer
